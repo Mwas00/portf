@@ -1,0 +1,182 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1;
+    position: sticky;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.home-image {
+    flex: 1;
+    text-align: right;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about, .skills, .projects, .contact {
+    margin-bottom: 30px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.skills-progress {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 20px;
+}
+
+.skills-progress-bar {
+    height: 100%;
+    background-color: #4CAF50; /* Green progress bar */
+    width: 0%; /* Initial width */
+    transition: width 0.5s ease; /* Smooth transition */
+}
+.skills li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills li span {
+    min-width: 50px;
+    text-align: right;
+}
+
+.projects .project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.contact form input, .contact form textarea{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.contact form button{
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .home-image img {
+        border-radius: 50%;
+        align-items: start;
+        height: 230px;
+        width: 230px;
+    }
+
+    .home-text {
+        padding-right: 0;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        transition: 0.4s;
+        color: white;
+      }
+      
+      /* Optional: Add a class for animation when the icon is clicked */
+      .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+}

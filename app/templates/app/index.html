@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Njuguna Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        
+        <div class="hamburger" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+    </nav>
+
+
+    <div class="container" id="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h1>Hi, I am</h1>
+                <h1>Peter Njuguna</h1>
+                <p>A passionate software developer with a focus on creating efficient and user-friendly applications.</p>
+                <a href="{% static "pdf/cv.pdf" %}" target="_blank"><button>MyCV</button></a>
+            </div>
+            <div class="home-image">
+                <img src="{% static 'images/main.jpg'%}" alt="Developer Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="about">
+        <div class="about">
+            <h2>About Me</h2>
+            <p>As a software developer, I'm driven by a passion for crafting elegant and efficient solutions to complex problems. I thrive in environments where I can continuously learn and adapt to the ever-evolving landscape of technology. My focus is on writing clean, maintainable code, and I'm committed to delivering high-quality software that meets and exceeds user expectations. Whether it's developing robust back-end systems, creating intuitive front-end interfaces, or contributing to collaborative projects, I'm dedicated to leveraging my skills to build impactful and innovative applications.</p>
+            <a href="{% static "pdf/peter.pdf" %}" target="_blank"><button>PLP Certification</button></a> <br> <br>
+            <a href="{% static "pdf/hackaton.pdf" %}" target="_blank"><button>Hackathon Certificate</button></a>
+        </div>
+    </div>
+
+    <div class="container" id="skills">
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <span>HTML, CSS, JavaScript</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="90"></div>
+                    </div>
+                    <span>90%</span>
+                </li>
+                <li>
+                    <span>Python</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="80"></div>
+                    </div>
+                    <span>80%</span>
+                </li>
+                <li>
+                    <span>Dart with Flutter</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="70"></div>
+                    </div>
+                    <span>70%</span>
+                </li>
+                 <li>
+                    <span>Django</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="85"></div>
+                    </div>
+                    <span>85%</span>
+                </li>
+                <li>
+                    <span>Node.js</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="75"></div>
+                    </div>
+                    <span>75%</span>
+                </li>
+                <li>
+                    <span>SQL</span>
+                    <div class="skills-progress">
+                        <div class="skills-progress-bar" data-skill-percentage="60"></div>
+                    </div>
+                     <span>85%</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: Weather App</h3>
+                <p>This weather app, built with Django, leverages external APIs to fetch real-time weather data. Django's robust framework handles the back-end logic, including API integration, data processing, and database management. Users can input a location, and the app displays current weather conditions, forecasts, and other relevant information through a dynamic web interface powered by Django's templating system.</p>
+                <a href="https://github.com/Mwas00/weatherapp/tree/main/weatherapp" target="_blank"><button>code</button></a>
+            </div>
+            <div class="project">
+                <h3>Project 2: Calculator</h3>
+                <p>This simple Python calculator demonstrates fundamental programming concepts like user input, conditional logic, and error handling. It takes two numbers and an operator as input, performs the corresponding arithmetic operation, and displays the result. The try...except block gracefully handles potential ValueError exceptions, ensuring the program doesn't crash when users provide invalid input. This example provides a basic foundation for building more complex interactive applications.</p>
+                <a href="https://github.com/Mwas00/pyhonprojects/blob/main/calculator.py" target="_blank"><button>code</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Your Name" required>
+                <input type="number" placeholder="Your Phone Number" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message"></textarea required>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}">
+        
+        
+    </script>
+</body>
+</html>
